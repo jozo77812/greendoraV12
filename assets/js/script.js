@@ -1,30 +1,36 @@
-const cart = [];
+// Filtrovanie produktov podľa kategórie
+document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        const products = document.querySelectorAll('.product');
 
-function addToCart(productName, productPrice) {
-    const existingProduct = cart.find((product) => product.name === productName);
-    if (existingProduct) {
-        existingProduct.quantity++;
-    } else {
-        cart.push({ name: productName, price: productPrice, quantity: 1 });
-    }
-    console.log(cart); // Debugging log
-    updateCartDisplay();
-}
-
-function updateCartDisplay() {
-    let cartHTML = '';
-    let total = 0;
-    cart.forEach((item) => {
-        const itemTotal = item.price * item.quantity;
-        total += itemTotal;
-        cartHTML += `
-            <div class="cart-item">
-                <span>${item.name}</span>
-                <span>${item.quantity}</span>
-                <span>€${itemTotal.toFixed(2)}</span>
-            </div>
-        `;
+        products.forEach(product => {
+            if (filter === 'all' || product.classList.contains(filter)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
     });
-    document.getElementById('cart-display').innerHTML = cartHTML;
-    document.getElementById('cart-total').innerText = `Total: €${total.toFixed(2)}`;
-}
+});
+
+// Wishlist funkcia
+const wishlist = [];
+
+document.querySelectorAll('.wishlist-btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const productName = event.target.closest('.product').querySelector('p').innerText;
+        if (!wishlist.includes(productName)) {
+            wishlist.push(productName);
+            alert(`${productName} bol pridaný do wishlistu.`);
+        } else {
+            alert(`${productName} už je vo wishliste.`);
+        }
+    });
+});
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Produkt bol pridaný do košíka.');
+    });
+});
