@@ -38,9 +38,18 @@ body {
 
 /* Hero obrázok */
 .hero-container {
+    p.hero {
     position: relative;
-    height: 50vh;
-    overflow: hidden;
+    height: 50vh; /* Nastavte výšku hero sekcie */
+    background-image: url('assets/images/hero.jpg'); /* Hero obrázok */
+    background-size: cover; /* Obrázok vyplní celú sekciu */
+    background-position: center; /* Obrázok bude vycentrovaný */
+    display: flex;
+    align-items: center; /* Vertikálne centrovanie */
+    justify-content: center; /* Horizontálne centrovanie */
+    color: white; /* Text na pozadí bude biely */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Jemný tieň textu */
+}
 }
 
 .hero-container img {
