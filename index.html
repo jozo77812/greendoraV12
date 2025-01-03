@@ -1,59 +1,58 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenDora</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>GreenDora E-Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Horný pás -->
-    <header class="header">
+    <header>
         <h1>GreenDora</h1>
         <nav>
-            <a href="index.html">Domov</a>
-            <a href="contact.html">Kontakt</a>
-            <a href="cart.html">Košík</a>
+            <ul>
+                <li><a href="#products">Produkty</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero obrázok -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Vitajte v GreenDora</h1>
-            <p>Udržateľné riešenia pre váš život - Objavte naše ekologické produkty</p>
+    <section id="products">
+        <h2>Naše produkty</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="bamboo-toothbrush.jpg" alt="Bambusová zubná kefka">
+                <h3>Bambusová zubná kefka</h3>
+                <p>Ekologická kefka vyrobená z bambusu.</p>
+                <button>Kúpiť</button>
+            </div>
+            <div class="product">
+                <img src="glass-bottle.jpg" alt="Sklenená fľaša">
+                <h3>Sklenená fľaša</h3>
+                <p>Štýlová a udržateľná fľaša na vodu.</p>
+                <button>Kúpiť</button>
+            </div>
         </div>
     </section>
 
-    <!-- Sekcia produktov -->
-    <section class="products">
-        <h2 class="section-title">Naše produkty</h2>
-        <div class="product-grid">
-            <div class="product">
-                <a href="product.html?product=bamboo">
-                    <img src="assets/images/bamboo.jpg" alt="Bambusové produkty">
-                    <h3 class="product-title">Bambusové produkty</h3>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product.html?product=bottles">
-                    <img src="assets/images/bottles.jpg" alt="Sklenené fľaše">
-                    <h3 class="product-title">Sklenené fľaše</h3>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product.html?product=toys">
-                    <img src="assets/images/toys.jpg" alt="Drevené hračky">
-                    <h3 class="product-title">Drevené hračky</h3>
-                </a>
-            </div>
-            <div class="product">
-                <a href="product.html?product=beeswax">
-                    <img src="assets/images/wax.jpg" alt="Výrobky z včelieho vosku">
-                    <h3 class="product-title">Výrobky z včelieho vosku</h3>
-                </a>
-            </div>
-        </div>
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form>
+            <label for="name">Meno:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Správa:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Odoslať</button>
+        </form>
     </section>
+
+    <footer>
+        <p>&copy; 2025 GreenDora. Všetky práva vyhradené.</p>
+    </footer>
 </body>
 </html>
