@@ -1,45 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Commerce</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>GreenDora</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="logo">Eco Commerce</div>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="products.html">Products</a>
-                <a href="cart.html">Cart</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+    <!-- Horný pás -->
+    <header class="header">
+        <h1>GreenDora</h1>
+        <nav>
+            <a href="index.html">Domov</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="cart.html">Košík</a>
+        </nav>
     </header>
-    <main>
-        <section class="hero">
-            <img src="assets/images/hero.jpg" alt="Hero Image">
-        </section>
-        <section class="products">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <!-- Product cards -->
-                <div class="product-card">
-                    <img src="assets/images/product1.jpg" alt="Product 1">
-                    <h3>Eco Toy</h3>
-                    <button onclick="addToCart('Eco Toy', 15.99)">Add to Cart</button>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/product2.jpg" alt="Product 2">
-                    <h3>Glass Bottle</h3>
-                    <button onclick="addToCart('Glass Bottle', 12.99)">Add to Cart</button>
-                </div>
-                <!-- Add more products here -->
+
+    <!-- Hero obrázok -->
+    <section class="hero">
+        <div class="hero-container">
+            <img src="assets/images/hero.jpg" alt="Hero obrázok">
+        </div>
+    </section>
+
+    <!-- Biely pás s textom -->
+    <section class="hero-text-bar">
+        <p>Udržateľné riešenia pre váš život - Objavte naše ekologické produkty</p>
+    </section>
+
+    <!-- Sekcia produktov -->
+    <section class="products">
+        <h2 class="section-title">Naše produkty</h2>
+        <div class="product-grid">
+            <div class="product">
+                <a href="product.html?product=bamboo">
+                    <img src="assets/images/bamboo.jpg" alt="Bambusové produkty">
+                    <h3 class="product-title">Bambusové produkty</h3>
+                </a>
             </div>
-        </section>
-    </main>
-    <script src="script.js"></script>
+            <div class="product">
+                <a href="product.html?product=bottles">
+                    <img src="assets/images/bottles.jpg" alt="Sklenené fľaše">
+                    <h3 class="product-title">Sklenené fľaše</h3>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product.html?product=toys">
+                    <img src="assets/images/toys.jpg" alt="Drevené hračky">
+                    <h3 class="product-title">Drevené hračky</h3>
+                </a>
+            </div>
+            <div class="product">
+                <a href="product.html?product=beeswax">
+                    <img src="assets/images/wax.jpg" alt="Výrobky z včelieho vosku">
+                    <h3 class="product-title">Výrobky z včelieho vosku</h3>
+                </a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
